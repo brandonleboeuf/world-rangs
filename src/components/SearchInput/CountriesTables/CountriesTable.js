@@ -53,9 +53,9 @@ const CountriesTables = ({ countries }) => {
     }
   };
 
-  const setValueAndDirection = (value) => {
+  const setValueAndDirection = (newValue) => {
     switchDirection();
-    setValue(value);
+    setValue(newValue);
   };
 
   return (
