@@ -4,12 +4,12 @@ import styles from './Country.module.css';
 
 const getCountry = async (id) => {
   const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
-
   const country = await res.json();
 
   return country;
 };
 
+// upon page load, gets an array of all
 const Country = ({ country }) => {
   const [borders, setBorders] = useState([]);
 
@@ -40,11 +40,11 @@ const Country = ({ country }) => {
                 <div className={styles.overview_value}>
                   {country.population}
                 </div>
-                <div className={styles.overview_lable}>Population</div>
+                <div className={styles.overview_label}>Population</div>
               </div>
               <div className={styles.overview_area}>
                 <div className={styles.overview_value}>{country.area}</div>
-                <div className={styles.overview_lable}>Area</div>
+                <div className={styles.overview_label}>Area</div>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Country = ({ country }) => {
             </div>
 
             <div className={styles.details_panel_row}>
-              <div className={styles.details_panel_label}>Natrive name</div>
+              <div className={styles.details_panel_label}>Native name</div>
               <div className={styles.details_panel_value}>
                 {country.nativeName}
               </div>
@@ -94,7 +94,7 @@ const Country = ({ country }) => {
 
             <div className={styles.details_panel_borders}>
               <div className={styles.details_panel_borders_label}>
-                Neighbouring Countries
+                Neighboring Countries
               </div>
               <div className={styles.details_panel_borders_container}>
                 {borders.map(({ flag, name }) => (
@@ -120,6 +120,7 @@ const Country = ({ country }) => {
 
 export default Country;
 
+// sets up all posable routes for [id]
 export const getStaticPaths = async () => {
   const res = await fetch('https://restcountries.eu/rest/v2/all');
   const countries = await res.json();

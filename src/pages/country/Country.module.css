@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.overview_lable {
+.overview_label {
   font-size: 14px;
   color: var(--text-color-secondary);
 }
@@ -56,7 +56,7 @@
   border-bottom: 1px solid #e0e0e0;
 }
 
-.details_panel_lable {
+.details_panel_label {
   color: var(--text-color-secondary);
 }
 
@@ -79,7 +79,7 @@
   text-align: center;
 }
 
-.details_panel_borders_lable {
+.details_panel_borders_ {
   color: var(--text-color-secondary);
   margin-bottom: 20px;
 }
