@@ -88,6 +88,11 @@ const Country = ({ country }) => {
               </div>
             </div>
             <div className={styles.details_panel_row}>
+              {/* The Gini index, or Gini coefficient, is a measure of the distribution
+              of income across a population developed by the Italian statistician
+              Corrado Gini in 1912. It is often used as a gauge of economic
+              inequality, measuring income distribution or, less commonly, wealth
+              distribution among a population. */}
               <div className={styles.details_panel_label}>Gini</div>
               <div className={styles.details_panel_value}>{country.gini} %</div>
             </div>
